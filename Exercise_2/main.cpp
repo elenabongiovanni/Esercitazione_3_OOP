@@ -6,8 +6,7 @@ using namespace Complexlib;
 
 int main()
 {
-
-    Complex c(1,2.0000000000000001);
+    Complex c(1,-2.0000000000000001);
     cout << c << endl;
 
     Complex d(1,2.000000000000000081);
@@ -18,7 +17,7 @@ int main()
     else
         cout << "Differenza parte reale: " << abs(c.reale - d.reale) << endl << "Differenza parte immaginaria: " << abs(c.imm - d.imm) << endl;
 
-    Complex e = conj(c);
+    Complex e = conj(d);
     cout << e << endl;
 
     return 0;

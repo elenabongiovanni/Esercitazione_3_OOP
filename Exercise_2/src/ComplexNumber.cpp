@@ -10,7 +10,7 @@ ostream& operator<<(ostream& os, const Complex& c)
     if(abs(c.reale)>1.1e-16){
         if(c.imm > 1.1e-16)
             os << c.reale << "+" << c.imm << "i" << endl;
-        else if(c.imm <0)
+        else if(c.imm < -1.1e-16)
             os << c.reale << c.imm << "i" << endl;
         else
             os << c.reale;
@@ -59,8 +59,7 @@ bool operator==(const Complex& c1, const Complex& c2)
 
 Complex conj(const Complex& c)
 {
-    Complex con;
-    con = Complex(c.reale, - c.imm);
+    Complex con(c.reale, - c.imm);
     return con;
 }
 }
